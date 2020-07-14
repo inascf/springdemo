@@ -11,4 +11,9 @@ public class ZYController {
     public String demo() {
         return "success";
     }
+
+    @RequestMapping(value = "/hello")
+    public String hello() {
+        return "hello world";
+    }
 }
