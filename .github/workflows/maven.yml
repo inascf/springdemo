@@ -27,3 +27,16 @@ jobs:
         with:
           name: Package
           path: staging
+
+      - name: 'Send mail'
+        uses: dawidd6/action-send-mail@master
+        with:
+          server_address: smtp.qiye.aliyun.com
+          server_port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: Github SpringBootDemo Release
+          body: file://target/*.jar
+          to: ${{ secrets.MAIL_TO }}
+          from: GitHub Actions
+          content_type: text/plain
