@@ -36,7 +36,7 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: Github SpringBootDemo Release
-          body: file:///home/runner/work/springdemo/springdemo/staging/Package
+          body: file:///home/runner/work/springdemo/springdemo/target/javademo-0.0.1-SNAPSHOT.jar
           to: ${{ secrets.MAIL_TO }}
           from: GitHub Actions
           content_type: text/plain
