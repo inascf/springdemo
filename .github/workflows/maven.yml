@@ -21,9 +21,9 @@ jobs:
         run: mvn -B clean package -DskipTests
       - name: Maven Verify
         run: mvn -B clean verify
-      - uses: actions/upload-artifact@v1
       - name: publish
         run: mkdir staging && cp target/*.jar staging
+      - uses: actions/upload-artifact@v1
         with:
           name: Package
           path: staging
